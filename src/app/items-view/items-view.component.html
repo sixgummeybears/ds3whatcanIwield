@@ -1,0 +1,28 @@
+<app-items-view-filter (filterCriteriaEvent)="applyFilter($event)"></app-items-view-filter>
+
+<div *ngIf="showResults">
+    <app-items-table *ngIf="matchedDaggers.length > 0" [weaponCategory]="'Daggers'" [weapons]="matchedDaggers"></app-items-table>
+    <app-items-table *ngIf="matchedStraightSwords.length > 0" [weaponCategory]="'Straight Swords'" [weapons]="matchedStraightSwords"></app-items-table>
+    <app-items-table *ngIf="matchedGreatswords.length > 0" [weaponCategory]="'Great Swords'" [weapons]="matchedGreatswords"></app-items-table>
+    <app-items-table *ngIf="matchedUltraGreatswords.length > 0" [weaponCategory]="'Ultra Greatswords'" [weapons]="matchedUltraGreatswords"></app-items-table>
+    <app-items-table *ngIf="matchedCurvedSwords.length > 0" [weaponCategory]="'Curved Swords'" [weapons]="matchedCurvedSwords"></app-items-table>
+    <app-items-table *ngIf="matchedKatanas.length > 0" [weaponCategory]="'Katanas'" [weapons]="matchedKatanas"></app-items-table>
+    <app-items-table *ngIf="matchedCurvedGreatswords.length > 0" [weaponCategory]="'Curved Greatswords'" [weapons]="matchedCurvedGreatswords"></app-items-table>
+    <app-items-table *ngIf="matchedPiercingSwords.length > 0" [weaponCategory]="'Piercing Swords'" [weapons]="matchedPiercingSwords"></app-items-table>
+    <app-items-table *ngIf="matchedAxes.length > 0" [weaponCategory]="'Axes'" [weapons]="matchedAxes"></app-items-table>
+    <app-items-table *ngIf="matchedGreataxes.length > 0" [weaponCategory]="'Great Axes'" [weapons]="matchedGreataxes"></app-items-table>
+    <app-items-table *ngIf="matchedHammers.length > 0" [weaponCategory]="'Hammers'" [weapons]="matchedHammers"></app-items-table>
+    <app-items-table *ngIf="matchedGreatHammers.length > 0" [weaponCategory]="'Great Hammers'" [weapons]="matchedGreatHammers"></app-items-table>
+    <app-items-table *ngIf="matchedFists.length > 0" [weaponCategory]="'Fists and Claws'" [weapons]="matchedFists"></app-items-table>
+    <app-items-table *ngIf="matchedSpears.length > 0" [weaponCategory]="'Spears and Pikes'" [weapons]="matchedSpears"></app-items-table>
+    <app-items-table *ngIf="matchedHalberds.length > 0" [weaponCategory]="'Halberds'" [weapons]="matchedHalberds"></app-items-table>
+    <app-items-table *ngIf="matchedReapers.length > 0" [weaponCategory]="'Reapers'" [weapons]="matchedReapers"></app-items-table>
+    <app-items-table *ngIf="matchedWhips.length > 0" [weaponCategory]="'Whips'" [weapons]="matchedWhips"></app-items-table>
+    <app-items-table *ngIf="matchedBows.length > 0" [weaponCategory]="'Bows'" [weapons]="matchedBows"></app-items-table>
+    <app-items-table *ngIf="matchedGreatbows.length > 0" [weaponCategory]="'Greatbows'" [weapons]="matchedGreatbows"></app-items-table>
+    <app-items-table *ngIf="matchedCrossbows.length > 0" [weaponCategory]="'Crossbows'" [weapons]="matchedCrossbows"></app-items-table>
+    <app-items-table *ngIf="matchedStaves.length > 0" [weaponCategory]="'Staves'" [weapons]="matchedStaves"></app-items-table>
+    <app-items-table *ngIf="matchedFlames.length > 0" [weaponCategory]="'Pyromancy Flames'" [weapons]="matchedFlames"></app-items-table>
+    <app-items-table *ngIf="matchedTalismans.length > 0" [weaponCategory]="'Talismans'" [weapons]="matchedTalismans"></app-items-table>
+    <app-items-table *ngIf="matchedChimes.length > 0" [weaponCategory]="'Sacred Chimes'" [weapons]="matchedChimes"></app-items-table>
+</div>
