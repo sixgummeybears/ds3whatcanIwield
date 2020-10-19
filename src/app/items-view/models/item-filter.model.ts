@@ -3,4 +3,5 @@ export class ItemFilter {
     dexterity: number = 1;
     intelligence: number = 1;
     faith: number = 1;
+    twoHanded: boolean = false;
 }

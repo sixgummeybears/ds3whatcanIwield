@@ -15,7 +15,7 @@
         <tbody>
             <tr *ngFor="let weapon of weapons">
                 <td>{{weapon.name}}</td>
-                <td>{{weapon.strength}}</td>
+                <td>{{weapon.strength}} <span *ngIf="weapon.strength > strength">(Requires 2H)</span> </td>
                 <td>{{weapon.dexterity}}</td>
                 <td>{{weapon.intelligence}}</td>
                 <td>{{weapon.faith}}</td>

@@ -14,6 +14,9 @@ export class ItemsTableComponent implements OnInit {
   @Input()
   weaponCategory: string;
 
+  @Input()
+  strength: number;
+
   constructor() { }
 
   ngOnInit(): void {

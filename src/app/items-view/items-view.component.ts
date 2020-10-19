@@ -34,6 +34,8 @@ export class ItemsViewComponent implements OnInit {
   matchedTalismans: Weapon[];
   matchedChimes: Weapon[];
 
+  strength: number = 1;
+
   showResults: boolean;
 
   constructor() { }
@@ -68,12 +70,18 @@ export class ItemsViewComponent implements OnInit {
     this.matchedTalismans = this.filterWeapons(this.talismans, filterCriteria);
     this.matchedChimes = this.filterWeapons(this.chimes, filterCriteria);
 
+    this.strength = filterCriteria.strength;
+
     this.showResults = true;
   }
 
   private filterWeapons(weapons: Weapon[], filter: ItemFilter): Weapon[] {
     return weapons.filter( (weapon: Weapon) => {
-      return (weapon.strength <= filter.strength) && 
+      let strength = filter.strength;
+      if (filter.twoHanded) {
+        strength = strength * 1.5;
+      }
+      return (weapon.strength <= strength) && 
              (weapon.dexterity <= filter.dexterity) &&
              (weapon.intelligence <= filter.intelligence) &&
              (weapon.faith <= filter.faith);
